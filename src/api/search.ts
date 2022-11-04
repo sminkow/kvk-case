@@ -4,10 +4,6 @@ import { CompanyModel } from "./searchModel";
 
 const baseUrl = "https://617c09aad842cf001711c200.mockapi.io/v1";
 
-export const getCompanies: any = () => {
-  axios.get(`${baseUrl}/companies`);
-};
-
 export const searchCompanies = async (searchValue: string) => {
   return await axios.get(`${baseUrl}/companies/?search=${searchValue}`);
 };
